@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../css/forms.css" />
     <style>
         body {
-            background-image: url("../../img/fondos/f4.jpg");
+            background-image: url("../../img/fondos/f5.jpg");
         }
     </style>
 </head>
@@ -43,25 +43,25 @@
             </select>
             <select
                 onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);">
-                <option disabled>Quintana Roo</option>
-                <option value="./c.php">Consulta</option>
-                <option value="./a.php">Alta</option>
-                <option selected value="./b.php">Baja</optionselected>
-                <option value="./e.php">Editar</option>
+                <option selected disabled>Quintana Roo</option>
+                <option value="../quintana_roo/c.php">Consulta</option>
+                <option value="../quintana_roo/a.php">Alta</option>
+                <option value="./quintana_roo/b.php">Baja</optionselected>
+                <option value="../quintana_roo/e.php">Editar</option>
             </select>
             <select
                 onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);">
-                <option disabled selected>Yucatán</option>
-                <option value="../yucatan/c.php">Consulta</option>
-                <option value="../yucatan/a.php">Alta</option>
-                <option value="../yucatan/b.php">Baja</option>
-                <option value="../yucatan/e.php">Editar</option>
+                <option disabled>Yucatán</option>
+                <option value="./c.php">Consulta</option>
+                <option value="./a.php">Alta</option>
+                <option selected value="./b.php">Baja</option>
+                <option value="./e.php">Editar</option>
             </select>
             <button id="hide-button">X</button>
         </nav>
     </header>
     <main>
-        <h2>Baja - Quintana Roo</h2>
+        <h2>Baja - Yucatán</h2>
         <div class="form-content">
             <form action="el.php" method="POST" onsubmit="confirmarEliminacion(event)">
                 <label for="eliminar">ID: </label>
@@ -75,7 +75,7 @@
         <?php
         include_once "../conex.php";
         // Realizar la consulta
-        $sql = "SELECT * FROM quintana_roo";
+        $sql = "SELECT * FROM yucatan";
         $resultado = $conexion->query($sql);
         // Verificar si hay resultados
         if ($resultado->num_rows > 0) {

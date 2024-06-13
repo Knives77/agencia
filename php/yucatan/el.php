@@ -5,7 +5,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     include_once "../conex.php";
 
     // Preparar la consulta SQL para eliminar el registro
-    $sql = "DELETE FROM quintana_roo WHERE id = ?";
+    $sql = "DELETE FROM yucatan WHERE id = ?";
 
     // Preparar la declaración
     if ($stmt = $conexion->prepare($sql)) {
