@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../css/tablas.css" />
     <style>
         body {
-            background-image: url("../../img/fondos/f4.jpg");
+            background-image: url("../../img/fondos/f5.jpg");
         }
     </style>
 </head>
@@ -43,28 +43,28 @@
             <select
                 onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);">
                 <option selected disabled>Quintana Roo</option>
+                <option value="../quintana_roo/c.php">Consulta</option>
+                <option value="../quintana_roo/a.php">Alta</option>
+                <option value="../quintana_roo/b.php">Baja</option>
+                <option value="../quintana_roo/e.php">Editar</option>
+            </select>
+            <select
+                onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);">
+                <option disabled>Yucatán</option>
                 <option selected value="./c.php">Consulta</option>
                 <option value="./a.php">Alta</option>
                 <option value="./b.php">Baja</option>
                 <option value="./e.php">Editar</option>
             </select>
-            <select
-                onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);">
-                <option disabled selected>Yucatán</option>
-                <option value="../yucatan/c.php">Consulta</option>
-                <option value="../yucatan/a.php">Alta</option>
-                <option value="../yucatan/b.php">Baja</option>
-                <option value="../yucatan/e.php">Editar</option>
-            </select>
             <button id="hide-button">X</button>
         </nav>
     </header>
     <main>
-        <h2>Consulta - Quintana Roo</h2>
+        <h2>Consulta - Yucatán</h2>
         <?php
         include_once "../conex.php";
         // Realizar la consulta
-        $sql = "SELECT * FROM quintana_roo";
+        $sql = "SELECT * FROM yucatan";
         $resultado = $conexion->query($sql);
         // Verificar si hay resultados
         if ($resultado->num_rows > 0) {
