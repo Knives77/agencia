@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../css/forms.css" />
     <style>
         body {
-            background-image: url("../../img/fondos/f2.jpg");
+            background-image: url("../../img/fondos/f4.jpg");
         }
     </style>
 </head>
@@ -27,15 +27,15 @@
             </select>
             <select
                 onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);">
-                <option disabled>Ciudad de México</option>
-                <option value="./c.php">Consulta</option>
-                <option value="./a.php">Alta</option>
-                <option value="./b.php">Baja</option>
-                <option selected value="./e.php">Editar</option>
+                <option selected disabled>Ciudad de México</option>
+                <option value="../ciudad_mexico/c.php">Consulta</option>
+                <option value="../ciudad_mexico/a.php">Alta</option>
+                <option value="../ciudad_mexico/b.php">Baja</option>
+                <option value="../ciudad_mexico/e.php">Editar</option>
             </select>
             <select
                 onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);">
-                <option disabled selected>Jalisco</option>
+                <option selected disabled>Jalisco</option>
                 <option value="../jalisco/c.php">Consulta</option>
                 <option value="../jalisco/a.php">Alta</option>
                 <option value="../jalisco/b.php">Baja</option>
@@ -43,11 +43,11 @@
             </select>
             <select
                 onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);">
-                <option disabled selected>Quintana Roo</option>
-                <option value="../quintana_roo/c.php">Consulta</option>
-                <option value="../quintana_roo/a.php">Alta</option>
-                <option value="../quintana_roo/b.php">Baja</option>
-                <option value="../quintana_roo/e.php">Editar</option>
+                <option disabled>Quintana Roo</option>
+                <option value="./c.php">Consulta</option>
+                <option value="./a.php">Alta</option>
+                <option value="./b.php">Baja</optionselected>
+                <option selected value="./e.php">Editar</option>
             </select>
             <select
                 onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);">
@@ -61,7 +61,7 @@
         </nav>
     </header>
     <main>
-        <h2>Editar - Ciudad de México</h2>
+        <h2>Editar - Quintana Roo</h2>
         <div class="form-content">
             <form action="up.php" method="POST" onsubmit="confirmarEditar(event)">
                 <label for="editar">ID: </label>
@@ -75,7 +75,7 @@
         <?php
         include_once "../conex.php";
         // Realizar la consulta
-        $sql = "SELECT * FROM ciudad_mexico";
+        $sql = "SELECT * FROM quintana_roo";
         $resultado = $conexion->query($sql);
         // Verificar si hay resultados
         if ($resultado->num_rows > 0) {

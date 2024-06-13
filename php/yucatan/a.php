@@ -61,7 +61,7 @@
         </nav>
     </header>
     <main>
-        <h2>Altas - Quintana Roo</h2>
+        <h2>Altas - Yucatán</h2>
         <div class="form-content">
             <form action="sb.php" method="POST" enctype="multipart/form-data" onsubmit="confirmarSubida(event)">
                 <label for="nombre">Nombre: </label>

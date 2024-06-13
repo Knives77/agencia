@@ -24,3 +24,11 @@ function confirmarSubida(event) {
     event.preventDefault(); // Evita el envío del formulario
   }
 }
+
+function confirmarEditar(event) {
+  var id = document.getElementById("editar").value;
+  var confirmar = confirm("¿Estás seguro de que deseas editar el registro ?");
+  if (!confirmar) {
+    event.preventDefault(); // Evita el envío del formulario
+  }
+}
