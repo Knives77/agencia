@@ -16,3 +16,11 @@ function confirmarEliminacion(event) {
     event.preventDefault(); // Evita el envío del formulario
   }
 }
+
+function confirmarSubida(event) {
+  var id = document.getElementById("subir").value;
+  var confirmar = confirm("¿Estás seguro de que deseas subir el registro ?");
+  if (!confirmar) {
+    event.preventDefault(); // Evita el envío del formulario
+  }
+}

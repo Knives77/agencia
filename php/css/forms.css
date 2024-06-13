@@ -17,7 +17,21 @@ label {
 
 input[type="submit"],
 input[type="reset"],
-input[type="number"] {
+input[type="number"],
+input[type="text"],
+input[type="file"] {
+  margin-right: 20px;
+  background-color: #ffffff00;
+  color: white;
+  border: none;
+  border: 2px solid #ffffff77;
+}
+
+textarea {
+  width: 200px;
+  height: 100px;
+  max-width: 400px;
+  max-height: 150px;
   margin-right: 20px;
   background-color: #ffffff00;
   color: white;
