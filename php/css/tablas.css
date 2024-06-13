@@ -1,0 +1,36 @@
+table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 3px solid #ffffff77;
+}
+
+th {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid #ffffff77;
+  padding: 10px;
+  text-align: left;
+}
+
+td {
+  border-bottom: 1px solid #ffffff77;
+  border-right: 1px solid #ffffff77;
+  padding: 10px;
+  text-align: left;
+}
+
+thead tr {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+tr:nth-child(even) {
+  background-color: transparent;
+}
+
+tr:nth-child(odd) {
+  background-color: #00000038;
+}
+
+img {
+  max-width: 140px;
+  height: auto;
+}
