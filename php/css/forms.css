@@ -1,5 +1,5 @@
 .form-content {
-  width: 60%;
+  width: 80%;
   height: auto;
   border: 2px solid #ffffff77;
   margin: 0 auto 30px;
@@ -27,13 +27,33 @@ input[type="file"] {
   border: 2px solid #ffffff77;
 }
 
+input[type="number"],
+input[type="text"],
+input[type="file"] {
+  width: 400px;
+  height: 40px;
+  font-size: 20px;
+}
+
 textarea {
-  width: 200px;
+  width: 400px;
+  font-size: 20px;
   height: 100px;
   max-width: 400px;
   max-height: 150px;
   margin-right: 20px;
   background-color: #ffffff00;
+  color: white;
+  border: none;
+  border: 2px solid #ffffff77;
+}
+
+input[type="submit"],
+input[type="reset"] {
+  width: 90px;
+  height: 40px;
+  margin-right: 20px;
+  background-color: #242424b4;
   color: white;
   border: none;
   border: 2px solid #ffffff77;

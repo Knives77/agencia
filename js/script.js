@@ -1,5 +1,6 @@
 const hideButton = document.getElementById("hide-button");
 const selects = document.querySelectorAll("select");
+const conf = document.getElementById("imgC");
 
 hideButton.addEventListener("click", () => {
   selects.forEach((select) => {
@@ -32,3 +33,13 @@ function confirmarEditar(event) {
     event.preventDefault(); // Evita el envío del formulario
   }
 }
+
+conf.addEventListener("change", function () {
+  if (this.checked) {
+    document.getElementById("foto").disabled = true;
+    document.getElementById("imagen").disabled = true;
+  } else {
+    document.getElementById("foto").disabled = false;
+    document.getElementById("imagen").disabled = false;
+  }
+});
