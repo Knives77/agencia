@@ -3,7 +3,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["editarR"])) {
     $id = $_POST["editarR"];
     include_once "../conex.php";
 
-    $sql = "SELECT * FROM jalisco WHERE id = ?";
+    $sql = "SELECT * FROM quintana_roo WHERE id = ?";
     if ($stmt = $conexion->prepare($sql)) {
         $stmt->bind_param("i", $id);
 
@@ -54,7 +54,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["editarR"])) {
     <link rel="stylesheet" href="../css/forms.css" />
     <style>
         body {
-            background-image: url("../../img/fondos/f3.jpg");
+            background-image: url("../../img/fondos/f4.jpg");
         }
     </style>
 </head>
@@ -79,19 +79,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["editarR"])) {
             </select>
             <select
                 onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);">
-                <option disabled>Jalisco</option>
+                <option selected disabled>Jalisco</option>
+                <option value="../jalisco/c.php">Consulta</option>
+                <option value="../jalisco/a.php">Alta</option>
+                <option value="../jalisco/b.php">Baja</option>
+                <option value="../jalisco/e.php">Editar</option>
+            </select>
+            <select
+                onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);">
+                <option disabled>Quintana Roo</option>
                 <option value="./c.php">Consulta</option>
                 <option value="./a.php">Alta</option>
                 <option value="./b.php">Baja</option>
                 <option selected value="./e.php">Editar</option>
-            </select>
-            <select
-                onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);">
-                <option disabled selected>Quintana Roo</option>
-                <option value="../quintana_roo/c.php">Consulta</option>
-                <option value="../quintana_roo/a.php">Alta</option>
-                <option value="../quintana_roo/b.php">Baja</option>
-                <option value="../quintana_roo/e.php">Editar</option>
             </select>
             <select
                 onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);">
@@ -105,7 +105,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["editarR"])) {
         </nav>
     </header>
     <main>
-        <h2>Editar Registro - Jalisco</h2>
+        <h2>Editar Registro - Quintana Roo</h2>
         <div class="form-content">
             <form action="at.php" method="POST" enctype="multipart/form-data" onsubmit="confirmarSubida(event)">
                 <input type="hidden" name="id" value="<?php echo $registro['id']; ?>">

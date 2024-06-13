@@ -13,6 +13,7 @@ form {
 label {
   font-size: 20px;
   padding-right: 10px;
+  color: black;
 }
 
 input[type="submit"],
@@ -33,6 +34,7 @@ input[type="file"] {
   width: 400px;
   height: 40px;
   font-size: 20px;
+  color: black;
 }
 
 textarea {
@@ -46,6 +48,7 @@ textarea {
   color: white;
   border: none;
   border: 2px solid #ffffff77;
+  color: black;
 }
 
 input[type="submit"],
