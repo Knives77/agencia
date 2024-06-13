@@ -6,3 +6,13 @@ hideButton.addEventListener("click", () => {
     select.classList.toggle("hidden");
   });
 });
+
+function confirmarEliminacion(event) {
+  var id = document.getElementById("eliminar").value;
+  var confirmar = confirm(
+    "¿Estás seguro de que deseas eliminar el registro con ID: " + id + "?"
+  );
+  if (!confirmar) {
+    event.preventDefault(); // Evita el envío del formulario
+  }
+}
