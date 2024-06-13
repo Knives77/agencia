@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Agencia</title>
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/galeria.css" />
   </head>
   <body>
     <header>
@@ -13,9 +14,9 @@
         <select
           onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);"
         >
-          <option selected disabled>Principal</option>
+          <option disabled>Principal</option>
           <option value="./index.html"><i>Inicio</i></option>
-          <option value="./galeria.html">Galeria</option>
+          <option selected value="./galeria.html">Galeria</option>
         </select>
         <select
           onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);"
@@ -53,21 +54,30 @@
       </nav>
     </header>
     <main>
-      <h2>¡BIENVENIDO!</h2>
-      <p>
-        ¡Bienvenido a nuestra agencia de viajes especializada en explorar los
-        tesoros ocultos de México desde las alturas! En nuestra misión por
-        ofrecerte experiencias únicas, te invitamos a descubrir los paisajes más
-        impresionantes de este hermoso país desde una perspectiva diferente:
-        ¡desde el cielo! Nuestros vuelos a destinos turísticos mexicanos te
-        llevarán a lugares emblemáticos como las antiguas pirámides de Chichén
-        Itzá, la playa paradisíaca de Cancún o los pintorescos pueblos mágicos
-        que encantan a todo aquel que los visita. Prepárate para vivir momentos
-        inolvidables mientras exploras la rica historia, cultura vibrante y la
-        impresionante diversidad natural que México tiene para ofrecerte.
-        ¡Embarca en un viaje lleno de belleza y emoción con nosotros!
-      </p>
-      <img src="./img/chi.JPG" alt="error" style="width: 500px; height: auto" />
+      <h2>Galeria</h2>
+      <div class="gal">
+        <div class="gallery">
+          <div class="gallery-item">
+            <img src="./img/galeria/1.jpg" alt="Imagen 1" />
+          </div>
+          <div class="gallery-item">
+            <img src="./img/galeria/2.jpg" alt="Imagen 2" />
+          </div>
+          <div class="gallery-item">
+            <img src="./img/galeria/3.jpg" alt="Imagen 3" />
+          </div>
+          <div class="gallery-item">
+            <img src="./img/galeria/4.jpg" alt="Imagen 4" />
+          </div>
+          <div class="gallery-item">
+            <img src="./img/galeria/5.jpg" alt="Imagen 5" />
+          </div>
+        </div>
+      </div>
+      <div class="lightbox" id="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox-content" id="lightbox-content" />
+      </div>
     </main>
     <footer>&copy; 2023 Agencia</footer>
     <script src="./js/script.js"></script>
